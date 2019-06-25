@@ -25,7 +25,7 @@ static GLuint textureId = 0u;
 
 static int WIN_WIDTH = 500;                       // ウィンドウの幅
 static int WIN_HEIGHT = 500;                       // ウィンドウの高さ
-static const char *WIN_TITLE = "2-1";     // ウィンドウのタイトル
+static const char *WIN_TITLE = "dice";     // ウィンドウのタイトル
 
 static const double PI = 4.0 * std::atan(1.0);
 
