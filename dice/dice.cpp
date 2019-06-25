@@ -340,20 +340,19 @@ void paintGL() {
 	glUniformMatrix4fv(uid, 1, GL_FALSE, glm::value_ptr(mvpMat));
 
 	//ラベルを色として物体を描画//frag
-	uid = glGetUniformLocation(programId, "u_selectID");//selectID=1 or -1
+	uid = glGetUniformLocation(programId, "u_selectID");
 	//選択されていればオブジェクト番号(1)そうでなければ - 1を渡す
-	glUniform1i(uid, selectMode ? 1 : -1);//選択の有無と色ラベルを渡す//
+	glUniform1i(uid, selectMode ? 1 : -1);
 	//glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 	//選択した面を明るくするためのID
 	uid = glGetUniformLocation(programId, "u_selectFace");
 	glUniform1i(uid, selectFace);
 	
-	//texture
 	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_2D, textureId);
 
-	//uniform変数//frag
+	//uniform変数
 	uid = glGetUniformLocation(programId, "u_texture");
 	glUniform1i(uid, 0);
 
@@ -425,7 +424,7 @@ int main(int argc, char **argv) {
 		return 1;
 	}
 
-	// OpenGLのバージョン設定 (Macの場合には必ず必要)
+	// OpenGLのバージョン設定 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
