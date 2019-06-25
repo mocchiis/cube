@@ -401,10 +401,7 @@ void mouseEvent(GLFWwindow *window, int button, int action, int mods) {
 		glfwGetFramebufferSize(window, &renderBufferWidth, &renderBufferHeight);
 		int pixelSize = std::max(renderBufferWidth / WIN_WIDTH, renderBufferHeight / WIN_HEIGHT);
 
-		// より適切なやり方
-		//クリックした位置だけ読みこんでそのラベルを見る
-		//安直だが分かりやすい方法 →画面全体のバッファを読んで, クリックした画素のラベルを見る
-
+		
 		unsigned char byte[4];//byteベクトル
 		
 		//描画内容の取得 //WIN_HEIGHT - cy - 1:y座標は上下が逆になることに注意 
