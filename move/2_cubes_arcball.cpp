@@ -20,7 +20,7 @@
 
 static int WIN_WIDTH = 500;                       // ウィンドウの幅
 static int WIN_HEIGHT = 500;                       // ウィンドウの高さ
-static const char *WIN_TITLE = "";     // ウィンドウのタイトル
+static const char *WIN_TITLE = "moving_cubes";     // ウィンドウのタイトル
 
 // シェーダファイル
 static std::string VERT_SHADER_FILE = std::string(SHADER_DIRECTORY) + "render.vert";
